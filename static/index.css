@@ -1,0 +1,216 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+:root {
+
+    --length-spacer-1: 5px;
+    --length-spacer-2: 10px;
+
+    --color-block-primary: #551B14;
+    --color-block-secondary: #6D3D14;
+    --color-line-primary: #CDC5B4;
+    --color-line-secondary: #85756E;
+    --color-accent: #B59DA4;
+
+    --color-nav-background: var(--color-block-primary);
+    --color-nav-dropdown-background: var(--color-block-secondary);
+    --color-nav-line: var(--color-line-primary);
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.page {
+
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav-bar {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--color-nav-background);
+    color: var(--color-nav-line);
+    padding: var(--length-spacer-2);
+
+}
+
+.nav-bar-item {
+
+    margin-left: var(--length-spacer-1);
+    background-color: var(--color-nav-dropdown-background);
+    padding: var(--length-spacer-1);
+    position: relative;
+
+}
+
+.nav-bar-item:first-child {
+
+    margin-left: 0;
+
+}
+
+.nav-bar-item:hover {
+
+    outline: solid 3px black;
+    text-decoration: underline;
+    /* padding-bottom: var(--length-spacer-2); */
+
+}
+
+.nav-bar-item:hover .nav-bar-sub-box {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    outline : solid 3px black;
+    top: 100%;
+    width: max-content;
+
+}
+
+.nav-bar-sub-box {
+
+    display: none;
+    left:0;
+    padding: var(--length-spacer-1);
+    background-color: var(--color-nav-dropdown-background);
+    z-index: 5;
+
+}
+
+.nav-bar-right {
+
+    margin-right: 0;
+    margin-left:auto;
+
+}
+
+.nav-bar-sub-item {
+
+    position: relative;
+
+}
+
+.nav-bar-sub-item:hover {
+
+    text-decoration: underline;
+
+}
+
+.nav-bar-sub-item:hover span::after {
+
+    content: '\203A';
+    font: large;
+
+}
+
+.nav-bar-sub-sub-box {
+
+    display: none;
+
+}
+
+.nav-bar-sub-item:hover .nav-bar-sub-sub-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width:max-content;
+    margin-left: calc(100%) ;
+    top: 0;
+    border: solid 3px black;
+    background-color: var(--color-nav-dropdown-background);
+}
+
+.nav-bar-sub-sub-item:hover {
+
+    text-decoration: underline;
+
+}
+
+.content {
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-accent);
+
+}
+
+.family-tree {
+
+    height: 100%;
+
+}
+
+.family-tree svg {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.family-tree svg path {
+
+    stroke-width: 5px;
+    stroke: red;
+
+}

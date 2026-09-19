@@ -1,0 +1,8 @@
+{
+
+    "people": [],
+    "clans": [],
+    "tree": [],
+    "testNavItem": 
+        {"text": "test two", "subItems": [{"text":"test three", "subItems": [{"text":"test four"}]}]}
+}
