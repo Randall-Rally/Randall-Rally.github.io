@@ -1,0 +1,31 @@
+{
+  "name": "randallrally",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "webpack --config webpack.config.js --watch --mode development",
+    "build-prod": "webpack --config webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Randall-Rally/Randall-Rally.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Randall-Rally/Randall-Rally.github.io/issues"
+  },
+  "homepage": "https://github.com/Randall-Rally/Randall-Rally.github.io#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "css-loader": "^7.1.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.6.2",
+    "typescript": "^6.0.3",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3"
+  }
+}
