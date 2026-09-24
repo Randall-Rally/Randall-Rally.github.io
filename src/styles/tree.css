@@ -1,0 +1,19 @@
+
+.tree-parent {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tree-svg * {
+
+    font: normal 12px sans-serif;
+    user-select: none;
+
+}
+
+.tree-node {
+    stroke-width: 1px;
+    stroke: black;
+    fill: none;
+}
